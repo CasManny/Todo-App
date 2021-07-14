@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body,html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 0 2rem;
+}
+.title {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+.todo-container {
+    height: 3rem;
+    margin: 2rem auto 0;
+    width: 600px;
+    display: flex;
+    justify-items: center;
+}
+.todo-data {
+    position: relative;
+    width: 100%;
+}
+.input-todo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem; 
+    font-family: inherit;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+.input-todo:focus ~ .input-label {
+    top: -0.5rem;
+    left: .8rem;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 10px;
+}
+.input-label {
+    position: absolute;
+    top: 0.8rem;
+    left: .7rem;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all .2s ease;
+    background-color: white;
+}
+.todo-container .btn {
+    padding: 7px 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: rgb(14, 187, 14);
+    color: white;
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 50px;
+    z-index: 10;
+}
+
+.todos {
+    list-style: decimal;
+    width: 70%;
+    margin: 2rem auto;
+}
+.todo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.todo.complete {
+    opacity: .4;
+    text-decoration: line-through;
+}
+.todo h1 {
+    flex: 1;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.todo button {
+    color: white;
+    text-transform: uppercase;
+    padding: 5px;
+    cursor: pointer;
+}
+.delete {
+    background: rgb(109, 19, 19);
+}
+.completed {
+    background: rgb(32, 151, 32);
+    margin-left: 5px;
+}
+.alert {
+    width: 100%;
+    padding: 1rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: white;
+}
+.alert.success {
+    background: green;
+}
+.alert.danger {
+    background: red;
+}
+@media screen and (max-width:780px) {
+    .todo-container {
+
+    width: 100%;
+    padding: 0 1rem;
+}
+.todo button {
+    padding: 2px;
+}
+.todo h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+}
